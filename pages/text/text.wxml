@@ -1,0 +1,20 @@
+<!--pages/text/text.wxml-->
+
+<!-- 1.基本使用 -->
+<text>hello minmin\n</text>
+<text>你好 小程序\n</text>
+
+<!-- 2.selectable -->
+<!-- 默认情况下text中的文本长按是不能选中 -->
+<text selectable="{{true}}">hello minmin\n</text>
+<text selectable>hello minmin\n</text>
+
+<!-- 3.space决定文中空格的大小 -->
+<!-- ensp半个 -->
+<!-- emsp一个 -->
+<text space="nbsp">hello world\n</text>
+<text space="ensp">hello world\n</text>
+<text space="emsp">hello world\n</text>
+
+<!-- 4.decode是否解码文本 -->
+<text decode>5 &gt; 3</text>
