@@ -1,0 +1,25 @@
+<!--pages/image/image.wxml-->
+
+<!-- 1.基本使用 -->
+<!-- 重点：
+1.可以写成单标签，可以写成双标签
+2.默认有自己的大小 320x240
+3.行内块级元素 -->
+<image></image>
+<text>hahaha</text>
+
+<!-- 2.src本地地址/远程地址 相对路径/绝对路径-->
+<image src="../../assets/tabbar/home.png"></image>
+<image src="/assets/tabbar/home.png"></image>
+<image src=""></image>
+
+<!-- 补充：相册中的图片 -->
+<button bindtap="handlePic">选中图片</button>
+<image src="{{imagePath}}"></image>
+
+<!-- 3.bindload 监听图片加载完成时 -->
+<view>----------------</view>
+<image wx:for="{{10}}" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1583049276&di=39fd6fca2c16b4e54d62b25339c58c90&src=http://a3.att.hudong.com/68/61/300000839764127060614318218_950.jpg" bindload="handleImageLoad" lazy-load="{{false}}"></image>
+
+<!-- 4.长按图片出现识别小程序码 -->
+<image show-menu-by-longpress src="/assets/tabbar/home.png" ></image>
