@@ -1,0 +1,18 @@
+ .box{
+  width: 100px;
+  height: 200px;
+  background: palegoldenrod;
+}
+
+.box1{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+
+.box2{
+  margin-top: 10px;
+  width: 200rpx;
+  height: 200rpx;
+  background: orange;
+} 
