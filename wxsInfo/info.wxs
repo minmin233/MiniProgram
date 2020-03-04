@@ -1,0 +1,11 @@
+var foo = "hello world";
+var name = "minmin";
+var sum = function (num1, num2) {
+  return num1 + num2;
+}
+
+module.exports = {
+  foo: foo,
+  name: name,
+  sum: sum
+}

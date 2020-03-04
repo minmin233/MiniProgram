@@ -1,0 +1,33 @@
+<!--pages/wxs/wxs.wxml-->
+
+<!-- 定义方式 -->
+<!-- <wxs module="info">
+  var foo="hello world";
+  var name="minmin";
+  var sum=function(num1,num2){
+    return num1+num2;
+  }
+
+  module.exports={
+    foo:foo,
+    name:name,
+    sum:sum
+  }
+</wxs> -->
+
+
+<!-- 定义在单独的wxs文件中，用标签导入 -->
+<!-- 必须使用相对路径 -->
+<wxs src="../../wxsInfo/info.wxs" module="info" />
+<view>{{info.foo}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(5,4)}}</view>
+
+
+<view>----------案例-----------</view>
+
+<wxs src="../../wxsInfo/format.wxs" module="format"/>
+<view>{{format.priceFormat(price)}}</view>
+
+<view>----应用------</view>
+<view>{{format.dateFormat(time,'yyyy-mm-dd')}}</view>
