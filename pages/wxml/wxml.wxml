@@ -1,0 +1,36 @@
+<!--pages/wxml/wxml.wxml-->
+<view>---------列表渲染------</view>
+<!-- 1.wx:for基础 -->
+<!-- 数组 字符串 数字 -->
+<!-- item是自动生成 表示数组里面的一项 -->
+<!-- <view wx:for="{{[1,2,3]}}">{{item}} {{index}}</view>
+<view wx:for="minmin">{{item}} {{index}}</view>
+<view wx:for="9">{{item}} {{index}}</view>
+<view wx:for="{{9}}">{{item}} {{index}}</view> -->
+
+<!-- 标签不是组件 -->
+<view wx:if="{{isShow}}">
+  <button>按钮</button>
+  <view>haha</view>
+  <text>heihei</text>
+</view>
+
+<!-- 提高性能 -->
+<block wx:if="{{isShow}}">
+  <button>按钮</button>
+  <view>haha</view>
+  <text>heihei</text>
+</block>
+
+<!-- item index起名字 -->
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}} {{i}}</view>
+
+<block wx:for="{{nums}}" wx:for-item="inner_nums">
+  <block wx:for="{{inner_nums}}">
+    <view>{{item}}</view>
+  </block>
+  
+</block>
+
+<!-- key的作用 是唯一标识-->
+<view wx:for="{{movies}}" wx:key="movies">{{item}}</view>
