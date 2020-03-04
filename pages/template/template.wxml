@@ -1,0 +1,14 @@
+<!--pages/template/template.wxml-->
+<!-- 模板中包括的内容在没有被使用前是不会进行任何渲染的 -->
+<!-- <template name="contentItem">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+
+<!-- import不能递归导入模板   -->
+<!-- include不能导入模板 但是可以引入公共组件 把公共组件抽取到一个文件中 可以递归引入 -->
+<import src="/wxml/template.wxml" />
+<!-- <import src="../../wxml/template.wxml" /> -->
+
+<template is="contentItem" data="{{btnText:'按钮',content:'哈哈'}}"></template>
+<template is="contentItem" data="{{btnText:'警告',content:'呵呵'}}"></template>
