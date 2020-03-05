@@ -1,2 +1,24 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 标签名只支持小写 不用驼峰 用中划线做分割或者下划线 -->
+<!-- 给自定义组件取名字 不能用wx-当前缀 -->
+<!-- 可以在全局做注册 多个页面都用到这个组件时 -->
+
+<!-- 1.自定义组件的基本使用 -->
+<my-cpn></my-cpn>
+<my-cpn/>
+
+<view>------------</view>
+<!-- 自定义组件的样式不会对home中的样式有影响 互不影响 class是隔离的 -->
+<!-- 组件内不允许使用主键选择器 属性选择器 标签选择器 -->
+<view class="title">minmin</view>
+<my-style/>
+
+<view>---------------</view>
+<!-- 给自定义组件传递数据、样式 -->
+<my-prop title="哈哈哈" titleclass="red"/>
+<my-prop title="嘿嘿嘿" titleclass="blue"/>
+<my-prop titleclass="green" />
+
+<view>----------</view>
+<view>当前计数：{{counter}}</view>
+<my-event bind:increment="handleIncrement"/>

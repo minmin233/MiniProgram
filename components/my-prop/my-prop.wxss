@@ -1,0 +1,13 @@
+/* components/my-prop/my-prop.wxss */
+.titile{
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.content{
+  font-size: 30rpx;
+}
+
+/* .titleclass{
+  background: red;
+} */
