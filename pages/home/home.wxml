@@ -1,2 +1,27 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<button size="mini" bindtap="handleClick"
+bind:tap="handleClick"
+catch:tap="handleClick">按钮</button>
+
+<view class="box" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd"
+bindtap="handleTap" bindlongpress="handleLongpress"></view>
+
+<!-- 事件的传递参数 -->
+<view class="box1">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="item" bindtap="handleItemClick"
+    data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+
+<!-- 事件冒泡和事件捕获 -->
+<!-- 从外向内捕获 从内向外冒泡 -->
+<!-- bind一层一层传递 -->
+<!-- catch阻止事件的进一步传递 -->
+<view class="view1" capture-bind:tap="handleCaptureView1" bindtap="handleBindView1">
+  <view class="view2" capture-bind:tap="handleCaptureView2" bindtap="handleBindView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView3"></view>
+  </view>
+</view>
+
