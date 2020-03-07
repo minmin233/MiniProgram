@@ -7,6 +7,16 @@ Page({
   data: {
 
   },
+  handleIncrementCpn(){
+    //获取组件对象
+    const my_sel = this.selectComponent('#sel-id');
+    //修改组件中的数据
+    // my_sel.setData({
+    //   counter:my_sel.data.counter+1
+    // })
+    my_sel.inrementCounter(10)
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

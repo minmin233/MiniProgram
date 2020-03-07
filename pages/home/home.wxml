@@ -1,2 +1,4 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 直接选中组件修改数据、调用方法 -->
+<button size="mini" bindtap="handleIncrementCpn">修改组件内的数据</button>
+<my-sel id="sel-id" />
