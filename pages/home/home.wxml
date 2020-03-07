@@ -1,2 +1,19 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.单个插槽的使用 -->
+<my-slot>
+  <button>我是插槽的按钮</button>
+</my-slot>
+
+<my-slot>
+  <text>我是文本</text>
+</my-slot>
+
+<view>------------</view>
+<!-- 多插槽注意事项
+     要给每一个插槽取名字
+     components对象中添加一个选项
+ -->
+<my-mslot>
+  <button slot="slot2">我是插入的按钮</button>
+  <slider slot="slot1"></slider>
+</my-mslot>
