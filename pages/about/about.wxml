@@ -1,2 +1,6 @@
 <!--pages/about/about.wxml-->
 <text>pages/about/about.wxml</text>
+
+<navigator url="/pages/profile/profile">跳转profile页</navigator>
+
+

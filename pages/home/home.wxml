@@ -1,2 +1,14 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<!-- 1.页面跳转 -->
+<navigator url="/pages/category/category">跳到分类页</navigator>
+
+<!-- 将首页关闭掉了 -->
+<navigator url="/pages/category/category" open-type="redirect">跳到分类页（redirect）</navigator>
+
+<!-- 跳到tabBar -->
+<navigator url="/pages/category/category" open-type="switchTab">跳到分类页(switchTab)</navigator>
+
+
+<navigator url="/pages/about/about" open-type="reLaunch">跳到关于页(reLaunch)</navigator>
+
