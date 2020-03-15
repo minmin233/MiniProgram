@@ -1,2 +1,25 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<!-- 1.轮播图 -->
+<!-- 1.1请求轮播图相关的数据 接口 -->
+
+<!-- 1.2展示轮播图 -->
+<!-- 细节：swiper有自己默认的高度 -->
+<m-swiper list="{{banners}}" />
+
+<!-- 2.推荐数据的展示 -->
+<m-recommend recommends="{{recommends}}" bind:imageload="handleImageLoad" />
+
+<!-- 3.展示本周流行 -->
+<m-popular />
+
+<!-- 4.tab-ontrol -->
+<m-tab-control id="tab-control" titles="{{titles}}" bind:tabclick="handleTabClick" class="{{isTabFixed ? 'fixed' : ' '}}" />
+<m-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}" />
+
+<!-- 5.展示商品数据 -->
+<m-goods goods="{{goods[currentType].list}}" />
+
+<!-- 6.回到顶部 -->
+<!-- hidden对自定义组件无效 -->
+<m-back-top wx:if="{{showBackTop}}"/>

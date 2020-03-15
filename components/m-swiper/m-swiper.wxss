@@ -1,0 +1,4 @@
+/* components/m-swiper/m-swiper.wxss */
+.swiper_item image{
+  width: 100%;
+}
